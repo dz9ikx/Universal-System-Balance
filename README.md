@@ -25,7 +25,17 @@ This theory demonstrates that $\zeta_c$ is:
 $$\zeta_c = \frac{1}{\sqrt{2}} \approx 0.7071067811865475$$
 
 In dynamic systems governed by the equation:
+
 $$\ddot{q} + 2\zeta_{eff}\omega_0\dot{q} + \omega_0^2 q = f(t)$$
+
+Where:
+*   $q$ — System state (position/amplitude).
+*   $\dot{q}$ — Velocity (first derivative).
+*   $\ddot{q}$ — Acceleration (second derivative).
+*   $\zeta_{eff}$ — Effective damping ratio.
+*   $\omega_0$ — Natural frequency of the system.
+*   $f(t)$ — External forcing function/input.
+
 The value $\zeta_{eff} = \zeta_c$ provides a **maximally flat frequency response** (Butterworth filter) and optimal stability.
 
 ---
@@ -37,7 +47,15 @@ To extract the "event skeleton" from the "substrate noise," we use the Differenc
 1.  **Filtering:** $DoG(r) = G(r, \sigma_1) - G(r, \sigma_2)$, where $\sigma_2/\sigma_1 = \sqrt{2}$.
 2.  **Thresholding:** $T = \zeta_c \cdot RMS(DoG)$.
 3.  **Chladni Data Structures:** Data is treated as a resonating plate. Structural nodes are identified at:
-    $$\text{Nodes} = \{r : |x(r)| > \zeta_c \cdot \sigma\}$$
+
+$$\text{Nodes} = \{r : |x(r)| > \zeta_c \cdot \sigma\}$$
+
+Where:
+*   $r$ — Position vector in space.
+*   $G$ — Gaussian filter function.
+*   $\sigma$ — Standard deviation (scale) of the filter.
+*   $T$ — Dynamic threshold level.
+*   $RMS$ — Root Mean Square value.
 
 ---
 
@@ -46,6 +64,12 @@ To extract the "event skeleton" from the "substrate noise," we use the Differenc
 A system reaches a point of no return (phase transition) when the third derivative ("jerk") nullifies while the acceleration amplitude is high:
 
 $$t_{crit} : \frac{d^3x}{dt^3} = 0 \quad \text{AND} \quad \frac{|a(t)|}{RMS(a)} > \zeta_c$$
+
+Where:
+*   $t_{crit}$ — The critical time point of a phase transition.
+*   $x$ — System state (position/amplitude).
+*   $a(t)$ — Acceleration ($\ddot{x}(t)$).
+*   $d^3x/dt^3$ — Jerk (third derivative of position).
 
 This is the mathematical definition of the moment when opposing forces (Order vs. Chaos) are at maximum tension before choosing a trajectory.
 
