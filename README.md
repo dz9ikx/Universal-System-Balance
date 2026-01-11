@@ -98,8 +98,13 @@ Using $\zeta_c$ as a setpoint for magnetic coils to suppress MHD instabilities (
 ## V. INFORMATION THEOREM (Revised)
 
 The invariant $\zeta_c$ maximizes the number of **distinguishable structural patterns**. In the limit of a single dominant structure ($N_{eff} \to 1$):
+
 $$\frac{S}{S+N} = \frac{1}{\sqrt{2}} \implies \text{Optimal Structural Information}$$
 
+Where:
+*   $S$ — Signal power/Structural energy.
+*   $N$ — Noise power/Environmental entropy.
+*   $N_{eff}$ — Effective dimensionality of the system (related to correlation matrix).
 
 ---
 
