@@ -62,8 +62,9 @@ class Balance0707Layer(nn.Module):
         threshold = 0.707 * sigma
         mask = (x.abs() > threshold).float()
         return x * mask * 1.414  # Energy compensation
+```
 
-
+---
 
 ### 2. Fusion Energy (Tokamak Plasma Control)
 Using $\zeta_c$ as a setpoint for magnetic coils to suppress MHD instabilities (ELMs, RWM) with zero phase lag and maximum damping.
